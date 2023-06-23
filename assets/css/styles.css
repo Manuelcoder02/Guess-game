@@ -1,0 +1,301 @@
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: Traffolight;
+  src: url('/assets/webfonts/Traffolight.otf');
+}
+body {
+  background-image: url('/images/abstract-geometric-white-background-free-vector.jpg');
+ /* background-repeat:; */
+  background-size: cover;
+  font-family: 'Traffolight';
+}
+
+.container {
+  width: 70vw;
+  max-width: 450px;
+  /* height: 40vh; */
+  padding: 0.5em;
+ /* background-color: #fff; */
+ background: linear-gradient(to top left, #d21312, #f15a59);
+ margin: 250px auto;
+ text-align: center;
+ border-radius: 25px;
+ box-shadow: 2px 5px 10px 10px rgba(0, 0, 0, 0.2);
+}
+/*
+
+#container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+} */
+
+.welcome-text {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: #000;
+  position: relative;
+}
+
+.welcome-text h3:last-child {
+  margin-top: -.5em;
+}
+
+.choose {
+  margin-bottom: 1em;
+  
+}
+
+.easy, .normal {
+  margin-right: 1em;
+}
+
+.mode, .btn--help {
+  font-family: 'Traffolight';
+  padding: .5em;
+  border-radius: 25px;
+  border: none;
+  box-shadow: 1px 1px 7px 3px rgba(0, 0, 0, 0.2);
+  background-color: #eee;
+  margin-bottom: 2em;
+}
+
+.btn--help {
+  font-size: 1.1em;
+  margin-top: 1.3em;
+}
+
+.btn:hover, .btn--help:hover {
+  opacity: 0.8;
+}
+
+.hidden {  justify-content: center;
+
+  display: none;
+}
+
+/* Styling of the mode */
+
+.header {
+ /* position: relative; */
+}
+.e-mode {
+ /* position: absolute; */
+ margin-top: -1.7em;
+}
+.e-mode h3 {
+  background-color: #000;
+  color: #fff;
+  width: 40%;
+  margin: .7rem auto;
+}
+.sub-head {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.again {
+  padding: 1em;
+  font-size: 1em;
+  margin-top: -.5em;
+  border-radius: 10px;
+  background-color: #eee;
+  border: none;
+  font-family: 'Traffolight';
+  font-weight: bold;
+}
+
+.timer {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-end;
+  /*margin-top: -1.1em; */
+  padding: 0 .3em;
+}
+.timer h3 {
+  margin-top: -.15em;
+}
+
+.seconds {
+  padding: 1em;
+  border: none;
+  background-size: #eee;
+  margin-top: -.5em;
+  font-family: 'Traffolight';
+}
+.progress-bar {
+  display: flex;
+  margin-top: .3em;
+  width: 100%;
+}
+.a {
+  background-color: #000;
+  width: 20%;
+  visibility: hidden;
+}
+.a:first-child{
+  visibility: visible;
+}
+
+/* Styling of the secret number*/
+
+.secret-number {
+  padding: 1em;
+  color: #fff;
+  background-color: #000;
+  width: 70%;
+  margin: 1em auto;
+  font-size: 2em
+}
+
+/* hint area */
+
+.hint {
+  font-size: 1.3em;
+  margin-bottom: 1em;
+}
+
+/* Guess field */
+
+.guess-field {
+  margin: 0 auto;
+  width: 70%;
+  max-width: 500px;
+  /*:border: 3px solid red;*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ /* gap: 10px; */
+}
+
+.guess-number {
+  width: 50%;
+  background-color: #eee;
+  padding: 2em;
+  border: none;
+  border-top-left-radius: 20px;
+  font-size: 1em;
+  border-bottom-left-radius: 20px;
+  text-align: center;
+}
+.guess {
+  width: 50%;
+  background-color: #f00;
+  font-family: 'Traffolight';
+  padding: 2em;
+  color: #fff;
+  font-size: 1em;
+  border-bottom-right-radius: 20px;
+  border: none;
+  border-top-right-radius: 20px;
+}
+
+/* bottom area */
+
+.bottom {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  font-size: 1.3em;
+  margin-bottom: 2em;
+}
+
+/* developer info */
+
+.developer--info {
+  margin-top: -4em;
+  font-size: .8em;
+  text-align: center;
+  padding-bottom: 0;
+}
+
+/* MODAL AND OVERLAY */
+
+.modal {
+  position: absolute;
+  background-color: #fff;
+  width: 80%;
+  left: 10%;
+  top: 20%;
+  z-index: 10;
+  border-radius: 1em;
+  box-shadow: 5px 5px 25px #000;
+  font-size: 3rem;
+  padding: 6rem;
+  margin: auto;
+  color: #000;
+}
+
+.close-modal {
+  position: absolute;
+  background: none;
+  border: none;
+  top: 10%;
+  left: 80%;
+  font-size: 1em;
+}
+
+/* help area */
+
+.how-to-play ul, .how-to-play p {
+  color: #fff;
+  list-style-type: none;
+}
+.how-to-play p {
+  font-weight: bold; 
+}
+ul {
+  padding-left: 0;
+}
+
+/* Timer animation */
+
+
+
+/* Styling fkr the modal class */
+
+.modal {
+  position: absolute;
+  background-color: #fff;
+  width: 70vw;
+  left: 10%;
+  
+  z-index: 10;
+  border-radius: 1em;
+  box-shadow: 5px 5px 25px #000;
+  font-size: 2rem;
+  padding: 3rem;
+  margin: 50px auto;
+  color: #000;
+}
+
+.close-modal {
+  position: absolute;
+  background: none;
+  border: none;
+  top: 10%;
+  left: 80%;
+  font-size: 1em;
+}
+
+.overlay {
+  width: 100vw;
+  background-color: rgba(0,0,0,0.6);
+  height: 100vh;
+  z-index: 5;
+  backdrop-filter: blur(3px);
+  position: absolute;
+  top: 0%;
+  left: 0%;
+}
+
+/* ------- */
+.background-color {
+  background: linear-gradient(to top left, #28b487, #7dd56f);
+}
