@@ -107,7 +107,7 @@ const lostGame = function () {
   overlayEL.classList.remove("hidden");
   scoreEL.textContent = 0;
   hint.textContent = "Oops! You lost the game!😭, try again.";
-  modalContent.textContent = "Oops! You lost the game!😭, try again.";
+ // modalContent.textContent = "Oops! You lost the game!😭, try again.";
 
   closeModal();
 };
