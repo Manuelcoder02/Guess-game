@@ -4,13 +4,13 @@
 
 @font-face {
   font-family: Traffolight;
-  src: url('/assets/webfonts/Traffolight.otf');
+  src: url("/assets/webfonts/Traffolight.otf");
 }
 body {
-  background-image: url('/images/abstract-geometric-white-background-free-vector.jpg');
- /* background-repeat:; */
+  background-image: url("/images/abstract-geometric-white-background-free-vector.jpg");
+  /* background-repeat:; */
   background-size: cover;
-  font-family: 'Traffolight';
+  font-family: "Traffolight";
 }
 
 .container {
@@ -18,12 +18,12 @@ body {
   max-width: 450px;
   /* height: 40vh; */
   padding: 0.5em;
- /* background-color: #fff; */
- background: linear-gradient(to top left, #d21312, #f15a59);
- margin: 250px auto;
- text-align: center;
- border-radius: 25px;
- box-shadow: 2px 5px 10px 10px rgba(0, 0, 0, 0.2);
+  /* background-color: #fff; */
+  background: linear-gradient(to top left, #d21312, #f15a59);
+  margin: 250px auto;
+  text-align: center;
+  border-radius: 25px;
+  box-shadow: 2px 5px 10px 10px rgba(0, 0, 0, 0.2);
 }
 /*
 
@@ -42,21 +42,22 @@ body {
 }
 
 .welcome-text h3:last-child {
-  margin-top: -.5em;
+  margin-top: -0.5em;
 }
 
 .choose {
   margin-bottom: 1em;
-  
 }
 
-.easy, .normal {
+.easy,
+.normal {
   margin-right: 1em;
 }
 
-.mode, .btn--help {
-  font-family: 'Traffolight';
-  padding: .5em;
+.mode,
+.btn--help {
+  font-family: "Traffolight";
+  padding: 0.5em;
   border-radius: 25px;
   border: none;
   box-shadow: 1px 1px 7px 3px rgba(0, 0, 0, 0.2);
@@ -69,29 +70,28 @@ body {
   margin-top: 1.3em;
 }
 
-.btn:hover, .btn--help:hover {
+.btn:hover,
+.btn--help:hover {
   opacity: 0.8;
 }
 
-.hidden {  justify-content: center;
+.hidden {
+  justify-content: center;
 
   display: none;
 }
 
 /* Styling of the mode */
 
-.header {
- /* position: relative; */
-}
 .e-mode {
- /* position: absolute; */
- margin-top: -1.7em;
+  /* position: absolute; */
+  margin-top: -1.7em;
 }
 .e-mode h3 {
   background-color: #000;
   color: #fff;
   width: 40%;
-  margin: .7rem auto;
+  margin: 0.7rem auto;
 }
 .sub-head {
   display: flex;
@@ -103,11 +103,11 @@ body {
 .again {
   padding: 1em;
   font-size: 1em;
-  margin-top: -.5em;
+  margin-top: -0.5em;
   border-radius: 10px;
   background-color: #eee;
   border: none;
-  font-family: 'Traffolight';
+  font-family: "Traffolight";
   font-weight: bold;
 }
 
@@ -116,22 +116,22 @@ body {
   flex-flow: column wrap;
   justify-content: flex-end;
   /*margin-top: -1.1em; */
-  padding: 0 .3em;
+  padding: 0 0.3em;
 }
 .timer h3 {
-  margin-top: -.15em;
+  margin-top: -0.15em;
 }
 
 .seconds {
   padding: 1em;
   border: none;
   background-size: #eee;
-  margin-top: -.5em;
-  font-family: 'Traffolight';
+  margin-top: -0.5em;
+  font-family: "Traffolight";
 }
 .progress-bar {
   display: flex;
-  margin-top: .3em;
+  margin-top: 0.3em;
   width: 100%;
 }
 .a {
@@ -139,7 +139,7 @@ body {
   width: 20%;
   visibility: hidden;
 }
-.a:first-child{
+.a:first-child {
   visibility: visible;
 }
 
@@ -151,7 +151,7 @@ body {
   background-color: #000;
   width: 70%;
   margin: 1em auto;
-  font-size: 2em
+  font-size: 2em;
 }
 
 /* hint area */
@@ -171,7 +171,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
- /* gap: 10px; */
+  /* gap: 10px; */
 }
 
 .guess-number {
@@ -187,7 +187,7 @@ body {
 .guess {
   width: 50%;
   background-color: #f00;
-  font-family: 'Traffolight';
+  font-family: "Traffolight";
   padding: 2em;
   color: #fff;
   font-size: 1em;
@@ -210,7 +210,7 @@ body {
 
 .developer--info {
   margin-top: -4em;
-  font-size: .8em;
+  font-size: 0.8em;
   text-align: center;
   padding-bottom: 0;
 }
@@ -243,20 +243,19 @@ body {
 
 /* help area */
 
-.how-to-play ul, .how-to-play p {
+.how-to-play ul,
+.how-to-play p {
   color: #fff;
   list-style-type: none;
 }
 .how-to-play p {
-  font-weight: bold; 
+  font-weight: bold;
 }
 ul {
   padding-left: 0;
 }
 
 /* Timer animation */
-
-
 
 /* Styling fkr the modal class */
 
@@ -265,7 +264,7 @@ ul {
   background-color: #fff;
   width: 70vw;
   left: 10%;
-  
+
   z-index: 10;
   border-radius: 1em;
   box-shadow: 5px 5px 25px #000;
@@ -286,8 +285,8 @@ ul {
 
 .overlay {
   width: 100vw;
-  background-color: rgba(0,0,0,0.6);
-  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  height: 200vh;
   z-index: 5;
   backdrop-filter: blur(3px);
   position: absolute;
