@@ -27,6 +27,7 @@ const hint = document.querySelector(".hint");
 const scoreEL = document.querySelector(".score");
 const highScoreEL = document.querySelector(".highscore");
 const highScoreInfo = document.querySelector(".highscore-info");
+const modalContent = document.querySelector(".modal-content");
 
 // Storing the modals in variable
 const modalEL = document.querySelector(".modal");
@@ -36,7 +37,6 @@ const overlayEL = document.querySelector(".overlay");
 // storing the again functionality in a function
 
 const againFunction = function () {
-  score = 20;
   modeContainer.classList.remove("background-color");
   checkEL.classList.remove("background-color");
   secretNumberEL.textContent = "?";
@@ -72,15 +72,14 @@ const gameFunctionality = function () {
       } else {
         lostGame();
       }
-    }
-    if (guess === secretNumber) {
+    } else if (guess === secretNumber) {
       secretNumberEL.textContent = secretNumber;
       modeContainer.classList.add("background-color");
       checkEL.classList.add("background-color");
       hint.style.color = "#fff";
       hint.textContent = "Correct Number!🎉";
       modalEL.classList.remove("hidden");
-      // overlayEL.classList.remove("hidden");
+      overlayEL.classList.remove("hidden");
 
       if (score > highScore) {
         highScore = score;
@@ -93,19 +92,24 @@ const gameFunctionality = function () {
 
 const closeModal = function () {
   modalEL.classList.add("hidden");
-  // overlayEL.classList.add("hidden");
+  overlayEL.classList.add("hidden");
 };
 closeModalEL.addEventListener("click", closeModal);
-// overlayEL.addEventListener("click", closeModal);
+overlayEL.addEventListener("click", closeModal);
 // state variables
 let timerNumber = 5;
-let score = 20;
+let score = 30;
 let highScore = 0;
 
 // storing the lost gamd area into function
 const lostGame = function () {
-  hint.textContent = "Oops! You lost the game!😭, try again.";
+  modalEL.classList.remove("hidden");
+  overlayEL.classList.remove("hidden");
   scoreEL.textContent = 0;
+  hint.textContent = "Oops! You lost the game!😭, try again.";
+  modalContent.textContent = "Oops! You lost the game!😭, try again.";
+
+  closeModal();
 };
 
 // storing the add/removing of the hidden class in both welcome and mode page into a function
@@ -132,6 +136,7 @@ easyModeEL.addEventListener("click", function () {
   // Again functionality for easy
   againEL.addEventListener("click", function () {
     secretNumber = Math.trunc(Math.random() * 15) + 1;
+    score = 30;
     againFunction();
   });
 });
@@ -141,9 +146,12 @@ easyModeEL.addEventListener("click", function () {
 normalModeEL.addEventListener("click", function () {
   // creating a random number from 1 to 15 for normal mode
   let secretNumber = Math.trunc(Math.random() * 20) + 1;
+  score = 20;
+  scoreEL.textContent = score;
   toggleHidden();
   modeTitle.textContent = "Normal Mode";
-  betweenNumber.textContent = "Choose a number between 1 and 20";
+  betweenNumber.textContent =
+    "Choose a number between 1 and 20. You have 20 guesses.";
 
   gameFunctionality();
 
@@ -151,6 +159,7 @@ normalModeEL.addEventListener("click", function () {
 
   againEL.addEventListener("click", function () {
     secretNumber = Math.trunc(Math.random() * 20) + 1;
+    score = 20;
     againFunction();
   });
 });
@@ -160,6 +169,8 @@ normalModeEL.addEventListener("click", function () {
 advancedModeEL.addEventListener("click", function () {
   // creating a random number from 1 to 30 for advanced mode
   let secretNumber = Math.trunc(Math.random() * 30) + 1;
+  score = 10;
+  scoreEL.textContent = score;
   toggleHidden();
   modeTitle.textContent = "Advanced Mode";
   betweenNumber.textContent = "Choose a number between 1 and 30";
@@ -168,6 +179,7 @@ advancedModeEL.addEventListener("click", function () {
 
   againEL.addEventListener("click", function () {
     secretNumber = Math.trunc(Math.random() * 30) + 1;
+    score = 10;
     againFunction();
   });
 });
