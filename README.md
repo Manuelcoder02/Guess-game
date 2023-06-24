@@ -8,6 +8,7 @@ You can also click on the how to play button for help
  -------- EASY MODE --------
  -
 You are to guess a number between 1 and 15, click on check.
+You have 30 guesses. You lose the game once you run out of guesses
 If the number guess is lower than the secret number, a message will be displayed that it is "Too low!"
 If the number guess is higher than the secret number, a message will also be displayed that it is "Too high".
 Note that: Whenever your guesses are wrong (low or high), your point/score is reduced.
@@ -17,6 +18,7 @@ You can click on the again button to continue.
  -------- NORMAL MODE --------
  -
 You are to guess a number between 1 and 20, click on check.
+You have 20 guesses. You lose the game once you run out of guesses
 If the number guess is lower than the secret number, a message will be displayed that it is "Too low!"
 If the number guess is higher than the secret number, a message will also be displayed that it is "Too high".
 Note that: Whenever your guesses are wrong (low or high), your point/score is reduced.
@@ -27,6 +29,7 @@ You can click on the again button to continue.
  -------- ADVANCED MODE --------
  -
 You are to guess a number between 1 and 30, click on check.
+You have 10 guesses. You lose the game once you run out of guesses
 If the number guess is lower than the secret number, a message will be displayed that it is "Too low!"
 If the number guess is higher than the secret number, a message will also be displayed that it is "Too high".
 Note that: Whenever your guesses are wrong (low or high), your point/score is reduced.
