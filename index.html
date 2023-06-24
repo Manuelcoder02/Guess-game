@@ -1,132 +1,144 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Guess my number game</title>
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Guess my number game</title>
-  <link rel="stylesheet" href="/assets/css/styles.css">
-</head>
-
-<body>
-  <main>
-    <section class="welcome-page  ">
-      <div class="container">
-      <div class="welcome-text">
-        <h3>Hi!</h3>
-        <h3>Welcome to the Guess my number game.</h3>
-      </div>
-      <div class="choose-mode">
-        <h3>Choose a mode</h3>
-        <button class="btn easy mode" type="submit">Easy Mode</button>
-        <button class="btn normal mode" type="submit">Normal Mode</button>
-        <button class="btn advanced mode" type="submit">Advanced Mode</button>
-      </div>
-
-      <div class="how-to-play">
-        <button class="btn--help" type="submit">How to play</button>
-        <div class="help--text hidden">
-          <div class="help easyy">
-            <p>Easy Mode</p>
-            <div class="dropdown easy--help">
-              <ul>
-                <li>You are to choose a number between 1 and 15</li>
-                <li>Click on the guess to check your guess</li>
-                <li>Whenever you choose a wrong guess, your score gets reduced</li>
-                <li>Whenever your guess is right, the game stops</li>
-              </ul>
-            </div>
-          </div>
-          <div class="help normall">
-            <p>Normal Mode</p>
-            <div class="dropdown normal--help">
-              <ul>
-                <li>You are to choose a number between 1 and 20</li>
-                <li>Click on the guess to check your guess</li>
-                <li>Whenever you choose a wrong guess, your score gets reduced</li>
-                <li>Whenever your guess is right, the game stops</li>
-              </ul>
-            </div>
-          </div>
-          <div class="help advancedd">
-            <p>Advanced Mode</p>
-            <div class="dropdown advanced--help">
-              <ul>
-                <li>You are to choose a number between 1 and 30</li>
-                <li>Click on the guess to check your guess</li>
-                <li>Whenever you choose a wrong guess, your score gets reduced</li>
-                <li>Whenever your guess is right, the game stops</li>
-              </ul>
-            </div>
-          </div><!-- Details on how to play the game -->
+  <body>
+    <main>
+      <section class="welcome-page container">
+        <div class="welcome-text">
+          <h3>Hi!</h3>
+          <h3>Welcome to the Guess my number game.</h3>
         </div>
-      </div>
-        
-    </section>
-    <section class="modes container hidden">
-          <div class="header">
-              <div class="e-mode">
-                <h3 class="mode-title">Easy Mode</h3>
-              </div>
-              <div class="sub-head">
-              <div class="again">
-                <button type="submit" class="btn again">Again</button>
-              </div>
-              <div class="timer">
-                <div class="hidden">
-                  
-              
-                <h3>Timer</h3>
-                <button type="submit" class="btn seconds">60 seconds</button>
-                <div class="progress-bar">
-                  <div class="a line--1">.</div>
-                  <div class="a line--2">.</div>
-                  <div class="a line--3">.</div>
-                  <div class="a line--4">.</div>
-                  <div class="a line--5">.</div>
-                  <div class="a line--6">.</div>
-                  <div class="a line--7">.</div>
-                </div>
-                </div>
-                  </div>
-              </div>
-              <div class="between">
-                <p class="number--between">Choose a number between 1 and 15</p>
-              </div>
-          </div>
-          <div class="secret-number">
-            <h1>?</h1>
-          </div>
-          <div class="hint">
-            <p>Choose a number</p>
-          </div>
-          <div class="guess-field">
-              <input type="number" class="guess-number">
-            <button type="submit" class="btn guess">Guess</button>
-          </div>
-          <div class="bottom">
-            <p>Score = <span class="score">20</span> </p>
-            <p>Highscore = <span class="highscore">0</span></p>
-          </div>
-          <div class="mm">
-              <div class="modal hidden">
-                <button class="close-modal" type="submit">&times;</button>
-                <p class="modal-content">Congratulations 🎉. You won the game! <span class="highscore-info"></span></p>
-            </div>
-        </div
-      
-        <div class="overlay hidden">
-            
-          </div>
-          
-      
+        <div class="choose-mode">
+          <h3>Choose a mode</h3>
+          <button class="btn easy mode" type="submit">Easy Mode</button>
+          <button class="btn normal mode" type="submit">Normal Mode</button>
+          <button class="btn advanced mode" type="submit">Advanced Mode</button>
         </div>
-    </section>
-       <div class="developer--info">
+
+        <div class="how-to-play">
+          <button class="btn--help" type="submit">How to play</button>
+          <div class="help--text hidden">
+            <div class="help easyy">
+              <p>Easy Mode</p>
+              <div class="dropdown easy--help">
+                <ul>
+                  <li>You are to choose a number between 1 and 15</li>
+                  <li>Click on the guess to check your guess</li>
+                  <li>
+                    You have 30 guesses, you lose the game if you are out of
+                    guesses
+                  </li>
+                  <li>
+                    Whenever you choose a wrong guess, your score gets reduced
+                  </li>
+                  <li>Whenever your guess is right, the game stops</li>
+                </ul>
+              </div>
+            </div>
+            <div class="help normall">
+              <p>Normal Mode</p>
+              <div class="dropdown normal--help">
+                <ul>
+                  <li>You are to choose a number between 1 and 20</li>
+                  <li>Click on the guess to check your guess</li>
+                  <li>
+                    You have 20 guesses, you lose the game if you are out of
+                    guesses
+                  </li>
+                  <li>
+                    Whenever you choose a wrong guess, your score gets reduced
+                  </li>
+                  <li>Whenever your guess is right, the game stops</li>
+                </ul>
+              </div>
+            </div>
+            <div class="help advancedd">
+              <p>Advanced Mode</p>
+              <div class="dropdown advanced--help">
+                <ul>
+                  <li>You are to choose a number between 1 and 30</li>
+                  <li>Click on the guess to check your guess</li>
+                  <li>
+                    You have 10 guesses, you lose the game if you are out of
+                    guesses
+                  </li>
+                  <li>
+                    Whenever you choose a wrong guess, your score gets reduced
+                  </li>
+                  <li>Whenever your guess is right, the game stops</li>
+                </ul>
+              </div>
+            </div>
+            <!-- Details on how to play the game -->
+          </div>
+        </div>
+      </section>
+      <section class="modes container hidden">
+        <div class="header">
+          <div class="e-mode">
+            <h3 class="mode-title">Easy Mode</h3>
+          </div>
+          <div class="sub-head">
+            <div class="again">
+              <button type="submit" class="btn again">Again</button>
+            </div>
+            <div class="timer hidden">
+              <h3>Timer</h3>
+              <button type="submit" class="btn seconds">60 seconds</button>
+              <div class="progress-bar">
+                <div class="a line--1">.</div>
+                <div class="a line--2">.</div>
+                <div class="a line--3">.</div>
+                <div class="a line--4">.</div>
+                <div class="a line--5">.</div>
+                <div class="a line--6">.</div>
+                <div class="a line--7">.</div>
+              </div>
+            </div>
+          </div>
+          <div class="between">
+            <p class="number--between">
+              Choose a number between 1 and 15. You have 30 guesses.
+            </p>
+          </div>
+        </div>
+        <div class="secret-number">
+          <h1>?</h1>
+        </div>
+        <div class="hint">
+          <p>Choose a number</p>
+        </div>
+        <div class="guess-field">
+          <input type="number" class="guess-number" />
+          <button type="submit" class="btn guess">Guess</button>
+        </div>
+        <div class="bottom">
+          <p>Score = <span class="score">30</span></p>
+          <p>Highscore = <span class="highscore">0</span></p>
+        </div>
+        <div class="mm">
+          <div class="modal hidden">
+            <button class="close-modal" type="submit">&times;</button>
+            <p class="modal-content">
+              Congratulations 🎉. You won the game!
+              <span class="highscore-info"></span>
+              <p>Click on the close button or
+                outside to play again!</p>
+            </p>
+          </div>
+          <div class="overlay hidden"></div>
+        </div>
+      </section>
+      <div class="developer--info">
         <p>Developed by Sotunde Emmanuel Adefenwa 🤍.</p>
       </div>
-  </main>
-  <script src="/assets/script/script.js"></script>
-</body>
-
+    </main>
+    <script src="/assets/script/script.js"></script>
+  </body>
 </html>
